@@ -50,9 +50,12 @@ class RegisterJobListener implements ListenerInterface
     #[Override]
     public function process(object $event): void
     {
-        $config = $this->container->get(ConfigInterface::class)->get('job');
-
-        if ($config['enable'] !== true) {
+        if (
+            $this
+            ->container
+            ->get(ConfigInterface::class)
+            ->get('job.enable') !== true
+        ) {
             return;
         }
 
