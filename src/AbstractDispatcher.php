@@ -7,6 +7,8 @@ namespace Verdient\Hyperf3\Job;
 use Verdient\Job\AbstractDispatcher as JobAbstractDispatcher;
 use Verdient\Job\AdapterInterface;
 
+use function Hyperf\Support\make;
+
 /**
  * 抽象调度器
  *
@@ -27,5 +29,8 @@ abstract class AbstractDispatcher extends JobAbstractDispatcher
      *
      * @author Verdient。
      */
-    abstract protected function adapter(): AdapterInterface;
+    protected function adapter(): AdapterInterface
+    {
+        return make(AdapterInterface::class);
+    }
 }

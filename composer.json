@@ -14,7 +14,8 @@
         "psr/log": "^3.0",
         "verdient/job": "^0.0",
         "verdient/hyperf3-logger": "^2.0",
-        "verdient/hyperf3-task": "^2.0"
+        "verdient/hyperf3-task": "^2.0",
+        "hyperf/laminas-mime": "^3.0"
     },
     "autoload": {
         "psr-4": {

@@ -3,6 +3,7 @@
 namespace Verdient\Hyperf3\Job;
 
 use Override;
+use Verdient\Hyperf3\Di\Container;
 use Verdient\Hyperf3\Logger\HasLogger;
 use Verdient\Job\AbstractJob as JobAbstractJob;
 use Verdient\Job\AdapterInterface;
@@ -22,7 +23,10 @@ abstract class AbstractJob extends JobAbstractJob
      *
      * @author Verdient。
      */
-    abstract protected function adapter(): AdapterInterface;
+    protected function adapter(): AdapterInterface
+    {
+        return Container::get(AdapterInterface::class);
+    }
 
     /**
      * @author Verdient。
