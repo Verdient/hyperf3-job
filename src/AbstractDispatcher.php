@@ -21,16 +21,6 @@ abstract class AbstractDispatcher extends JobAbstractDispatcher
      */
     public function __construct()
     {
-        parent::__construct($this->adapter());
-    }
-
-    /**
-     * 获取适配器
-     *
-     * @author Verdient。
-     */
-    protected function adapter(): AdapterInterface
-    {
-        return make(AdapterInterface::class);
+        parent::__construct(make(AdapterInterface::class));
     }
 }
