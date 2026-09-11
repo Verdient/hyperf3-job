@@ -9,6 +9,8 @@ use Verdient\Job\AbstractJob as JobAbstractJob;
 use Verdient\Job\AdapterInterface;
 use Verdient\Job\JobInterface;
 
+use function Hyperf\Config\config;
+
 /**
  * 抽象任务
  *
@@ -17,6 +19,15 @@ use Verdient\Job\JobInterface;
 abstract class AbstractJob extends JobAbstractJob
 {
     use HasLogger;
+
+    /**
+     * @author Verdient。
+     */
+    #[Override]
+    public function queue(): string
+    {
+        return config('job.default_queue');
+    }
 
     /**
      * 获取适配器
