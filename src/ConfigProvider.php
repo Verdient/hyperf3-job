@@ -32,7 +32,9 @@ class ConfigProvider
                 ],
             ],
             'logger' => [
-                JobInterface::class => fn($name) => Utils::generateLoggerConfig($name)
+                'channels' => [
+                    JobInterface::class => fn($name) => Utils::generateLoggerConfig($name)
+                ],
             ]
         ];
     }
