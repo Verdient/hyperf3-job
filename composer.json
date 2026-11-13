@@ -5,7 +5,6 @@
         "hyperf/contract": "^3.2",
         "hyperf/event": "^3.2",
         "hyperf/di": "^3.2",
-        "hyperf/laminas-mime": "^3.0",
         "hyperf/logger": "^3.2",
         "hyperf/framework": "^3.2",
         "hyperf/server": "^3.2",
@@ -15,8 +14,8 @@
         "psr/container": "^2.0",
         "psr/log": "^3.0",
         "verdient/job": "^0.0",
-        "verdient/hyperf3-logger": "^2.1",
-        "verdient/hyperf3-task": "^2.1"
+        "verdient/hyperf3-logger": "^3.2",
+        "verdient/hyperf3-task": "^3.2"
     },
     "autoload": {
         "psr-4": {
